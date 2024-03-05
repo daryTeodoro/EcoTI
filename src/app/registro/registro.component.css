@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+
+.Titulo{
+    font-family: "Mate SC", serif;
+    color: #ecfff1;
+}
+.ContenedorFormulario{
+    padding: 170px 20px 20px;
+    height: 100vh;
+    background: rgb(0, 0, 0, .7) url(https://www.paymentscardsandmobile.com/wp-content/uploads/2019/10/e-commerce.jpg)no-repeat center fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.form-control{
+    border: 3px solid #02651d;
+}.form-control:focus{
+    box-shadow: none;
+}
+
+button{
+    background: #c1b595;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    padding: 5px 50px;
+    color: #000000;
+    font-family: "Cinzel", serif;
+    font-weight: bold;
+}button:hover{
+    background: #d3ffdf;
+}

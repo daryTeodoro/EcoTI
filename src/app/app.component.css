@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+.Text-Logo{
+    font-family: "Protest Guerrilla", sans-serif;
+    font-size: 3rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+.Navbar{
+    background-image: linear-gradient(to bottom right,#00390d,#008122);
+    padding: 7px 20px;
+}
+
+.Linea{
+    width: 80%;
+    height: 3px;
+    background: #ecfff1;
+    margin: 0;
+}
+
+.Opciones{
+    font-family: "Cinzel", serif;
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin: 20px 0px 10px;
+}.Opciones p{
+    cursor: pointer;
+    background: #00390d;
+    padding: 3px 0px;
+    border-radius: 20px;
+}.Opciones p:hover{
+    background: #ecfff1;
+    color: #00390d;
+    font-weight: bold;
+}

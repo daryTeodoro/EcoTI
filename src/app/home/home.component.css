@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+.Presentacion{
+    padding: 250px 20px 100px;
+    background: rgb(0, 0, 0, .7) url(https://www.paymentscardsandmobile.com/wp-content/uploads/2019/10/e-commerce.jpg)no-repeat center fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+    font-family: "Mate SC", serif;
+    color: #ecfff1;
+}
+
+.Titulo{
+    color: #00390d;
+    font-family: "Mate SC", serif;
+    margin: 0px 0px 8px;
+}
+
+.Tarjeta{
+    background: #ffffff;
+    width: 100%;
+}
+
+.Texto{
+    font-family: "Sacramento", cursive;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.Frase{
+    height: 150px;
+    background: rgb(0, 0, 0, .5) url(https://media.licdn.com/dms/image/D4D12AQEclaGowOB--A/article-cover_image-shrink_720_1280/0/1705901586605?e=2147483647&v=beta&t=CVjF2O0NO_5WXKyA465db5H8h5TTd9y1_b9s4cc7tq0)no-repeat center fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: #ecfff1;
+}
+
+.Atributo{
+    font-family: "Mate SC", serif;
+    color: #00390d;
+}
+
+img{
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+.Valores{
+    background: #ffffff;
+}.Valores h1{
+    font-size: 3.5rem;
+    font-family: "Protest Guerrilla", sans-serif;
+}.Valores h3{
+    font-family: "Marck Script", cursive;
+}
+
+.Redes{
+    background: rgb(0, 0, 0, .7) url(https://www.paymentscardsandmobile.com/wp-content/uploads/2019/10/e-commerce.jpg)no-repeat center fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+    font-family: "Mate SC", serif;
+    color: #ffffff;
+}.Redes .col{
+    height: 100%;
+    width: 100%;
+}.Redes button{
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 30px 0px;
+    margin: 0px 0px 10px;
+}
+
+.WhatsApp:hover{
+    background: #25D366;
+}
+
+.Facebook:hover{
+    background: #1877f2;
+    color: #ffffff;
+}
+
+.Youtube:hover{
+    background: #FF0000;
+    color: #ffffff;
+}
+
+.TwitterX:hover{
+    background: #000000;
+    color: #ffffff;
+}

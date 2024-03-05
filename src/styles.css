@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background:#c1b595;
+}body::-webkit-scrollbar { /* CSS scrollbar del Menu de Configuracion*/
+    width: 4px;               
+}body::-webkit-scrollbar-track {
+    background: white;        
+    border-radius: 10px;
+}body::-webkit-scrollbar-thumb {
+    background-color: #00390d;
+    border-radius: 10px;
+}

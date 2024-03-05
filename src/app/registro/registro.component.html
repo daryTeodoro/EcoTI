@@ -1,0 +1,20 @@
+<div class="ContenedorFormulario container-fluid d-flex justify-content-center align-items-center flex-column">
+    <form class="container" method="post" action="" align="center">
+        <h1 class="Titulo p-2 ps-4 pe-4">Crear Cuenta</h1>
+        <div class="form-floating mb-2">
+            <input type="text" class="form-control" id="registro_nombre" name="registro_nombre" placeholder="name@example.com">
+            <label for="registro_nombre">Nombre</label>
+        </div>
+        <div class="form-floating mb-2">
+            <input type="email" class="form-control" id="registro_correo" name="registro_correo" placeholder="name@example.com">
+            <label for="registro_correo">Correo</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="registro_contrasena" name="registro_contrasena" placeholder="Contraseña">
+            <label for="registro_contrasena">Contraseña</label>
+        </div>
+        <div>
+            <button type="button" (click)="registrar()">Registarse</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,16 @@
+<div class="ContenedorFormulario container-fluid d-flex justify-content-center align-items-center flex-column">
+    <form class="container" method="post" action="" align="center">
+        <h1 class="Titulo p-2 ps-4 pe-4">Iniciar Sesión</h1>
+        <div class="form-floating mb-2">
+            <input type="email" class="form-control" name="login_correo" #login_correo placeholder="name@example.com">
+            <label>Correo</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" name="login_contrasena" #login_contrasena placeholder="Contraseña">
+            <label>Contraseña</label>
+        </div>
+        <div>
+            <button type="button" (click)="ingresar()">Ingresar</button>
+        </div>
+    </form>
+</div>
