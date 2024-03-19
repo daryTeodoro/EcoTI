@@ -1,0 +1,49 @@
+.FotoPerfil{
+    height: 200px;
+    width: 200px;
+    border: 3px solid #000000;
+    border-radius: 100px;
+}
+
+.ContenedorPerfil{
+    height: 100vh;
+}
+.DataPerfil{
+    height: 93%;
+    width: 93%;
+}
+
+.dropdown-menu{
+    border-radius: 0px;
+}.dropdown-menu li{
+    cursor: pointer;
+    padding: 10px;
+}.dropdown-menu li:hover{
+    background: #d3ffdf;
+}
+
+
+.VideoCamara{
+    width: 250px;
+    height: 200px;
+    background-color: #000000;
+}
+
+.FotoCapturada{
+    width: 250px;
+    height: 200px;
+    background-color: #000000;
+}
+
+.ContenedorSecciones{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+.Cartera,
+.Logros {
+    height: 100%;
+    width: 100%;
+    background: #ecfff1;
+}

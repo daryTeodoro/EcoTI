@@ -1,0 +1,37 @@
+<div class="navbar Menu ps-3 pe-3 m-0">
+    <h1 class="Text-Logo">EcoTI</h1>
+    
+    <div class="btn-group dropstart">
+        <button type="button" class="BotonMenu" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-list"></i>
+        </button>
+        <ul class="dropdown-menu me-1 p-0">
+          <li routerLink="/perfil" routerLinkActive="active" ariaCurrentWhenActive="page">Perfil</li>
+          <li (click)="logout()">LogOut</li>
+        </ul>
+    </div>
+</div>
+
+<!--
+<div class="Container-fluid">
+    <div *ngIf="(user$ | async) as user">
+        <p>Correo electrónico: {{ user.email }}</p>
+    </div>
+</div>
+-->
+
+<div class="Container-fluid mt-4">
+    <div class="row m-0 align-items-center">
+        <div class="col-sm-6 m-0 text-center p-4">
+            <h2 class="Frase">Encuentra el producto que no sabias que necesitabas.</h2>
+        </div>
+        <div class="col-sm-6 m-0" align="center">
+            <img src="https://cdn-prd-strapi.debutify.com/6_Pu_G7_Pe2_W7bdx_T_Qb8t_O67_QI_Ujnb_L03_GT_0h0i_Qfap_40abb146b8.png" class="ImgPrincipal">
+        </div>
+    </div>
+</div>
+<hr>
+<div class="m-4">
+    <h2 class="Titulo">Productos Populares</h2>
+    <app-lista-productos></app-lista-productos>
+</div>

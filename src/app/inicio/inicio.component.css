@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+
+.Menu{
+    background-image: linear-gradient(to bottom right,#00390d,#008122);
+}
+
+.Text-Logo{
+    font-family: "Protest Guerrilla", sans-serif;
+    font-size: 3rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+.FirstContainer{
+    padding: 250px 20px 100px;
+}
+
+.BotonMenu{
+    border: none;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 1px 10px;
+    font-size: 1.5rem;
+}
+
+.dropdown-menu{
+    border-radius: 0;
+}
+
+.dropdown-menu li{
+    cursor: pointer;
+    padding: 10px;
+}.dropdown-menu li:hover{
+    background: #d3ffdf;
+}
+
+.ImgPrincipal{
+    height: 40vh;
+    max-width: 95%;
+    border: 4px solid #ffffff;
+    border-radius: 20vh 0vh;
+}
+
+.Frase{
+    font-family: "Marck Script", cursive;
+}
+
+.Titulo{
+    font-family: "Mate SC", serif;
+}

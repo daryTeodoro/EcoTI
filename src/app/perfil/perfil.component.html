@@ -1,0 +1,70 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4 d-flex justify-content-center align-items-center ContenedorPerfil">
+            <div class="bg-light rounded shadow DataPerfil p-3 d-flex justify-content-center align-items-center flex-column">
+                <div>
+                  <img src="https://secrecyjewels.es/blog/wp-content/uploads/2022/10/esencia-de-una-persona.jpg" class="FotoPerfil">
+                </div>
+                <div>
+                  <h6 class="p-2 pe-4 ps-4 pb-0 mt-2">Usuario Activo</h6>
+                  <div *ngIf="(user$ | async) as user">
+                    <p>{{ user.email }}</p>
+                  </div>
+                </div>
+                <div class="container-fluid">
+                  <div class="row">
+
+                    <div class="col-3 p-1">
+                      <div class="dropdown-center">
+                        <button class="btn btn-secondary" style="width: 100%;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-camera"></i>
+                        </button>
+                        <ul class="dropdown-menu p-0">
+                          <li data-bs-toggle="modal" data-bs-target="#ContenedorCambiarFoto">Camara</li>
+                          <!--<li>Eliminar Foto</li>-->
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="col-9 p-1">
+                      <button class="btn btn-danger" style="width: 100%;">Editar Información</button>
+                    </div>
+
+                  </div>
+                </div>
+                <div>
+                    <button class="btn btn-success mt-2" routerLink="/inicio" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="bi bi-house-fill"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8 ContenedorSecciones">
+            <div class="pt-4 p-2">
+              <div class="Cartera shadow rounded"></div>
+            </div>
+            <div class="pb-4 p-2">
+              <div class="Logros shadow rounded"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="ContenedorCambiarFoto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-dark text-white" data-bs-theme="dark">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Cambiar Foto</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="cerrarCamara()"></button>
+        </div>
+        <div class="modal-body d-flex align-items-center justify-content-center flex-column">
+          <button (click)="abrirCamara()" *ngIf="!camaraAbierta" class="mb-2 btn btn-dark">Abrir Camara</button>
+          <button (click)="cerrarCamara()" *ngIf="camaraAbierta" class="mb-2 btn btn-dark">Cerrar Camara</button>
+          <video #videoElement autoplay class="VideoCamara mb-2"></video>
+          <canvas #canvasElement style="display: none;"></canvas>
+          <button (click)="capturarFoto()" *ngIf="camaraAbierta" class="mb-2 btn btn-success"><i class="bi bi-camera-fill"></i></button>
+          <img [src]="fotoCapturada" *ngIf="fotoCapturada" class="border border-dark border-2 mb-2 FotoCapturada"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  

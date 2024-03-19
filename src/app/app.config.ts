@@ -29,7 +29,7 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(
       HttpClientModule,
       AngularFireModule.initializeApp(firebaseConfig),
-      AngularFirestoreModule
+      AngularFirestoreModule,
     ),
     provideServiceWorker('ngsw-worker.js', {
         enabled: !isDevMode(),

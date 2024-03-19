@@ -1,0 +1,15 @@
+<div class="Container-Fluid">
+    <div class="row">
+        <div *ngFor="let producto of productos" class="col-4">
+            <div class="pt-2 pb-2">
+                <div class="carta pt-2 pb-0 d-flex flex-column align-items-center justify-content-center">
+                    <img [src]="producto.thumbnail" class="img-product" alt="{{ producto.title }}">
+                    <div class="bg-light p-0"  align="center">
+                        <b class="NombreProductos">{{ producto.title.length > 30 ? producto.title.slice(0, 30) + '...' : producto.title }}</b>
+                        <div class="bg-success text-white pt-2 pb-2"><b>{{ producto.price }} pts</b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

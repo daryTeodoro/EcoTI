@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, User } from 'firebase/auth';
 import { Router } from '@angular/router';
+import { Observable, map, take } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -19,35 +21,35 @@ export class AuthService {
     return getAuth();
   }
 
+  getUser(): Observable<User | null> {
+    return this.afAuth.authState;
+  }
+
   async signIn(email: string, password: string) {
     try {
       await signInWithEmailAndPassword(getAuth(), email, password);
-      console.log('Inicio de sesión exitoso');
-      // Puedes realizar otras acciones después de un inicio de sesión exitoso si es necesario
+      //console.log('Inicio de sesión exitoso');
+      this.router.navigateByUrl('/inicio');
     } catch (error) {
-      console.error('Error al iniciar sesión', error.message);
-      // Puedes manejar el error o mostrar un mensaje al usuario
+      //console.error('Error al iniciar sesión', error.message);
+      alert("Correo o Contraseña Incorrectos")
     }
   }
 
   async signUp(email: string, password: string) {
     try {
       await createUserWithEmailAndPassword(getAuth(), email, password);
-      console.log('Registro exitoso');
-      // Puedes realizar otras acciones después de un registro exitoso si es necesario
+      //console.log('Registro exitoso');
+      this.router.navigateByUrl('/inicio');
     } catch (error) {
-      console.error('Error al registrarse', error.message);
-      // Puedes manejar el error o mostrar un mensaje al usuario
+      //console.error('Error al registrarse', error.message);
+      alert("No se pudo registrar el usuario")
     }
   }
 
   signOut() {
     getAuth().signOut();
     localStorage.removeItem('user');
-    this.routerlink('/auth');
-  }
-
-  routerlink(url: any) {
-    this.router.navigateByUrl(url);
+    this.router.navigate(['/home']);
   }
 }

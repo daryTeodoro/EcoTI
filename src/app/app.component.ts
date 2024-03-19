@@ -5,10 +5,16 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { RouterOutlet } from '@angular/router';
 import { RouterLink } from '@angular/router';
 import { RouterLinkActive } from '@angular/router';
+
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { CommonModule } from '@angular/common';
+import { AuthService } from './auth.service';
+
+import { User } from 'firebase/auth';
+import { Observable, filter, map } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',
@@ -26,12 +32,14 @@ import { CommonModule } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  /* implements OnInit */
+export class AppComponent implements OnInit {
   title = 'EcoTI';
   isOnline: boolean;
+  user$: Observable<User | null>;
 
-  constructor(private modalService: NgbModal) {
+  constructor(
+    private modalService: NgbModal, 
+    private authService: AuthService) {
     this.isOnline = false;
   }
 
@@ -39,17 +47,17 @@ export class AppComponent {
     this.modalService.open(modal);
   }
 
-  /*
-  public ngOnInit(): void {
+  ngOnInit(): void {
+    this.user$ = this.authService.getUser();
+
     this.updateOnlineStatus();
 
-    window.addEventListener('online', this.updateOnlineStatus.bind(this));
+    window.addEventListener('online',  this.updateOnlineStatus.bind(this));
     window.addEventListener('offline', this.updateOnlineStatus.bind(this));
   }
-  
+
   private updateOnlineStatus(): void {
     this.isOnline = window.navigator.onLine;
     console.info(`isOnline=[${this.isOnline}]`);
   }
-  */
 }
