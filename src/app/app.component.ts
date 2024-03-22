@@ -15,7 +15,6 @@ import { AuthService } from './auth.service';
 import { User } from 'firebase/auth';
 import { Observable, filter, map } from 'rxjs';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -34,13 +33,14 @@ import { Observable, filter, map } from 'rxjs';
 })
 export class AppComponent implements OnInit {
   title = 'EcoTI';
-  isOnline: boolean;
+  //isOnline: boolean;
   user$: Observable<User | null>;
 
   constructor(
     private modalService: NgbModal, 
-    private authService: AuthService) {
-    this.isOnline = false;
+    private authService: AuthService,
+    ) {
+    //this.isOnline = false;
   }
 
   public open(modal: any): void {
@@ -50,14 +50,14 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.user$ = this.authService.getUser();
 
-    this.updateOnlineStatus();
+   // this.updateOnlineStatus();
 
-    window.addEventListener('online',  this.updateOnlineStatus.bind(this));
-    window.addEventListener('offline', this.updateOnlineStatus.bind(this));
+    //window.addEventListener('online',  this.updateOnlineStatus.bind(this));
+    //window.addEventListener('offline', this.updateOnlineStatus.bind(this));
   }
 
-  private updateOnlineStatus(): void {
+  /*private updateOnlineStatus(): void {
     this.isOnline = window.navigator.onLine;
     console.info(`isOnline=[${this.isOnline}]`);
-  }
+  }*/
 }
