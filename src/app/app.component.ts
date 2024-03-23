@@ -14,6 +14,7 @@ import { AuthService } from './auth.service';
 
 import { User } from 'firebase/auth';
 import { Observable, filter, map } from 'rxjs';
+import { IndexedDBService } from './indexed-db.service';
 
 @Component({
   selector: 'app-root',
@@ -33,31 +34,31 @@ import { Observable, filter, map } from 'rxjs';
 })
 export class AppComponent implements OnInit {
   title = 'EcoTI';
-  //isOnline: boolean;
+  isOnline: boolean;
   user$: Observable<User | null>;
 
   constructor(
     private modalService: NgbModal, 
     private authService: AuthService,
     ) {
-    //this.isOnline = false;
+    this.isOnline = false;
   }
 
   public open(modal: any): void {
     this.modalService.open(modal);
   }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     this.user$ = this.authService.getUser();
 
-   // this.updateOnlineStatus();
+   this.updateOnlineStatus();
 
-    //window.addEventListener('online',  this.updateOnlineStatus.bind(this));
-    //window.addEventListener('offline', this.updateOnlineStatus.bind(this));
+    window.addEventListener('online',  this.updateOnlineStatus.bind(this));
+    window.addEventListener('offline', this.updateOnlineStatus.bind(this));
   }
 
-  /*private updateOnlineStatus(): void {
+  private updateOnlineStatus(): void {
     this.isOnline = window.navigator.onLine;
     console.info(`isOnline=[${this.isOnline}]`);
-  }*/
+  }
 }

@@ -7,7 +7,7 @@ describe('AppComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AppComponent],
+      imports: [AppComponent],
     }).compileComponents();
   });
 
@@ -16,7 +16,7 @@ describe('AppComponent', () => {
     app = fixture.componentInstance;
   });
   
-  /*
+  
   it('should create the app', () => {
     expect(app).toBeTruthy();
   });
@@ -24,7 +24,7 @@ describe('AppComponent', () => {
   it(`should have the 'EcoTI' title`, () => {
     expect(app.title).toEqual('EcoTI');
   });
-  */
+  
 
   it('should render Online when isOnline is true', () => {
     app.isOnline = true;
